@@ -139,7 +139,7 @@ em {
 
 
 /* ie must die */
-.ie-8 .learning .skill, .contact .contact-method {
+.ie-8 .learning .skill, .ie-8 .contact .contact-method {
   width: 33%;
 }
 
