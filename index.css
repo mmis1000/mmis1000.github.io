@@ -1,0 +1,162 @@
+html, body {
+  width:100%;
+  height:100%;
+  background:#fefefe;
+  border:none;
+  margin:none;
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color : #ffffff;
+}
+
+a:before {
+  font-family: FontAwesome;
+  content: "\f0c1";
+  font-size : 0.8em;
+  vertical-align:middle;
+  display: inline-block;
+  padding-right: 3px;
+}
+
+em {
+  font-weight:bold;
+  font-style: normal;
+}
+.page {
+  position:relative;
+  width:100%;
+  overflow: hidden;
+  
+  /* fix size */
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.about-wrapper {
+  height:100%;
+  display:table;
+  
+  background:black;
+  background:url(http://i.imgur.com/fflQKpx.jpg);
+  background-size: auto, 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: white;
+}
+.about-outer {
+  display:table-cell;
+  vertical-align:middle;
+}
+.about-inner {
+  margin-left:auto;
+  margin-right:auto;
+  width:80%;
+  text-align:center;
+}
+.learning {
+  text-align:center;
+  background: #f2f2f2;
+}
+.learning .skill {
+  width: 100%;
+  display: inline-block;
+  position:relative;
+  vertical-align:top;
+}
+.learning .skill .skill-inner {
+  margin-left:auto;
+  margin-right:auto;
+  background: #dddddd;
+  width: 95%;
+  margin-bottom:0.5em;
+  overflow:hidden;
+  padding-top:1em;
+  
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.26);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.26);
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.26);
+
+}
+.learning .skill .skill-inner .text {
+  padding: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+.learning .skill .skill-inner .js-icon {
+  width :80px;
+  height: 80px;
+  display: inline-block;
+  position:relative;
+  vertical-align:top;
+
+}
+.learning .skill .skill-inner .js-icon:before {
+  display:block;
+  position: absolute;
+  left: 5px;
+  top:5px;
+  bottom: 5px;
+  right:5px;
+  background: #ffff77;
+  content:"";
+}
+.learning .skill .skill-inner .js-icon:after {
+  display:block;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 40px;
+  color: #d2f2f2;
+  content:"JS";
+}
+
+
+.contact {
+  color: #f7f7f7;
+  background: #222222;
+  text-align: center;
+}
+
+.contact .contact-method {
+  vertical-align:top;
+  width: 95%;
+  display: inline-block;
+  /*height: 200px;*/
+  border-top: #777777 solid 1px;
+  padding-top:1em;
+  padding-bottom:1em;
+}
+.footer {
+  text-align: center;
+  background: #777777;
+}
+.footer a {
+  color: #000000;
+}
+
+
+/* ie must die */
+.ie-8 .learning .skill, .contact .contact-method {
+  width: 33%;
+}
+
+.ie-8 .contact .contact-method {
+  border-top: none;
+}
+
+@media screen and (min-width: 600px) {
+  .learning .skill, .contact .contact-method {
+    width: 33%;
+  }
+  .contact .contact-method {
+    border-top: none;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .learning .skill, .contact .contact-method {
+    width: 330px;
+  }
+}

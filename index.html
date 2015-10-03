@@ -1,10 +1,117 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Mmis1000</title>
+    <title>HTML barebone</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name="description" content="HTML barebone">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+     
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css" rel="stylesheet" type="text/css" />
+    <link href="./index.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <!--[if lt IE 9]>
+       <script>
+          document.createElement('header');
+          document.createElement('nav');
+          document.createElement('section');
+          document.createElement('article');
+          document.createElement('aside');
+          document.createElement('footer');
+
+          var root = document.documentElement;
+          root.setAttribute( "class", "ie-8" );
+       </script>
+    <![endif]-->
   </head>
   <body>
-    Hello World!
+    <!--[if lt IE 8]>
+      <div style='position:fixed;background:red;color:white;top:0px;left:0px;right:0px;font-size:1.5em;z-index:99999'>Your browser is out of date, and it wont display correctly with this site. Please consider update your browser!! <a href="https://whatbrowser.org/" style=" text-decoration: underline;">Learn more...</a></div>
+    <![endif]-->
+
+    <section class="page about-wrapper">
+      <div class="about-outer">
+        <div class="about-inner">
+          <i class="fa fa-user fa-5x"></i>
+          <h1>Mmis1000</h1>
+          <div>Hello! I am mmis1000, a student learning the web technology and skills</div>
+        </div>
+      </div>
+    </section>
+    <section class="page learning">
+      <h2>What am I learning?</h2>
+      <section class="skill">
+        <div class="skill-inner">
+          <i class="fa fa-html5 fa-5x" style="color: #ff7755"></i>
+          <h3>HTML</h3>
+          <p class="text">
+            <em>H</em>yper <em>T</em>ext <em>M</em>arkup <em>L</em>anguage
+          </p>
+          <p class="text">
+            It's text, but hyper than text. Allow images, audios, videos and other to be embedded with markups. 
+          </p>
+          <p class="text">
+            HTML describes the structure of a website semantically along with cues for presentation, making it a markup language, rather than a programming language.
+          </p>
+        </div>
+      </section><section class="skill">
+        <div class="skill-inner">
+          <i class="fa fa-css3 fa-5x" style="color: #5577ff"></i>
+          <h3>CSS</h3>
+          <p class="text">
+            <em>C</em>ascading <em>S</em>tyle <em>S</em>heets
+          </p>
+          <p class="text">
+            Use it to decorate the HTML, give it a new look!
+          </p>
+          <p class="text">
+            CSS is a style sheet language used for describing the presentation of a document written in a markup language
+          </p>
+        </div>
+      </section><section class="skill">
+        <div class="skill-inner">
+          <div class="js-icon">
+            
+          </div>
+          <h3>JS</h3>
+          <p class="text"><em>J</em>ava<em>S</em>cript</p>
+          <p class="text">
+            The programming language running in the browser (but no only in browser). Make all magic happend!
+          </p>
+          <p class="text">
+            JavaScript is a high level, dynamic, untyped, and interpreted programming language. It has been standardized in the ECMAScript language specification.
+          </p>
+        </div>
+      </section>
+    </section>
+    <section class="contact page">
+      <h2>To Contact <i class="fa fa-reply"></i></h2>
+      <section class="contact-method github">
+        <i class="fa fa-github fa-5x"></i>
+        <h3>Github</h3>
+        <p>GitHub is a Web-based Git repository hosting service. It offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features.</p>
+        <p><a href="https://github.com/mmis1000">Mmis1000</a></p>
+      </section><section class="contact-method facebook">
+        <i class="fa fa-facebook fa-5x"></i>
+        <h3>Facebook</h3>
+        <p>Facebook is an online social networking service headquartered in Menlo Park, California. Its website was launched on February 4, 2004, by Mark Zuckerberg with his Harvard College roommates and fellow students Eduardo Saverin, Andrew McCollum, Dustin Moskovitz and Chris Hughes.</p>
+        <p><a href="https://www.facebook.com/mmis1000">Mmis1000</a></p>
+      </section><section class="contact-method email">
+        <i class="fa fa-envelope fa-5x"></i>
+        <h3>Email</h3>
+        <p>Electronic mail, most commonly referred to as email or e-mail since around 1993, is a method of exchanging digital messages from an author to one or more recipients. Email operates across the Internet or other computer networks.</p>
+        <p><a href="mailto:mmis1000@yahoo.com.tw">Mmis1000</a></p>
+      </section>
+    </section>
+    <footer class="page footer">
+      <h3>About this Page</h3>
+      <p>
+        Last edit: <time datetime="2015-10-03 09:30">2015/10/03</time><br>
+        created by <a id="author" href="http://mmis1000.me/"  rel="author">mmis1000</a> <br>
+        Code release under <a href="https://en.wikipedia.org/wiki/MIT_License">MIT License</a>
+      </p>
+    </footer>
   </body>
 </html>
