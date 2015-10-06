@@ -90,6 +90,10 @@ em {
   100% {opacity: 1;}
 }
 
+.avatar {
+  position : relative;
+}
+
 
 .learning {
   text-align:center;
