@@ -30,7 +30,7 @@ function GhostType (targetId, options) {
   this.options = options || {
     interval : 50,
     delay : 2000
-  }
+  };
   this.targetId = targetId;
   this.target = $(this.targetId);
   
@@ -91,6 +91,10 @@ function GhostType (targetId, options) {
       typer.reset();
     }
   };
+  this.handles = {
+    start: function () {},
+    stop: function () {}
+  }
 }
 
 GhostType.prototype.start = function start() {
@@ -105,6 +109,8 @@ GhostType.prototype.start = function start() {
   $(this.targetId).html('');
   
   this.playing = true;
+  
+  this.handles.start.call(this);
   
   this.setTimeout(this.tick_.bind(this), this.options.delay);
 }
@@ -134,6 +140,8 @@ GhostType.prototype.clearTimeout = function clearTimeout_() {
 GhostType.prototype.stop = function stop() {
   this.clearTimeout();
   this.playing = false;
+  
+  this.handles.stop.call(this);
 }
 
 GhostType.prototype.resume = function stop() {
@@ -142,7 +150,7 @@ GhostType.prototype.resume = function stop() {
 
 /* reset content */
 GhostType.prototype.reset = function reset() {
-  this.clearTimeout();
+  this.stop();
   if (this.data.$originalText !== null) {
     this.target.html(this.data.$originalText);
   }
@@ -190,7 +198,8 @@ var typer = new GhostType(".about-inner p");
 
 typer.actions.who = function (args, next, typer) {
   var question = args.slice(1).join(' ');
-  var name = window.prompt(question, 'visitor') || 'visitor';
+  var name = typer.data.visitorName || window.prompt(question, 'visitor') || 'visitor';
+  typer.data.visitorName = name;
   typer.data.$remainingTexts.splice.apply(typer.data.$remainingTexts, [0, 0].concat(name.split('')));
   next();
 };
@@ -220,4 +229,17 @@ typer.actions.alert = function (args, next, typer) {
   alert(text);
   next();
 }
-//typer.start();
+$(".control").removeClass("hide");
+$(".control").on("click", function () {
+  if (!typer.playing) {
+    typer.reset();
+    typer.start();
+    $(this).removeClass('play').addClass('stop');
+  } else {
+    typer.reset();
+    $(this).removeClass('stop').addClass('play');
+  }
+});
+typer.handles.stop = function () {
+  $(".control").removeClass('stop').addClass('play');
+}
