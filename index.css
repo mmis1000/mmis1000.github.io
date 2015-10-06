@@ -39,7 +39,7 @@ em {
   display:table;
   
   background:black;
-  background:url(http://i.imgur.com/fflQKpx.jpg);
+  background:url(bg.jpg);
   background-size: auto, 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -60,6 +60,37 @@ em {
      -moz-text-shadow:0px 2px 10px #000000;
           text-shadow:0px 2px 10px #000000;
 }
+
+.cursor:after{
+  content: "|";
+  
+  -webkit-animation-name: blink;
+  -webkit-animation-duration: 0.8s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-timing-function: linear, steps(2, end);
+  
+  animation-name: blink;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-timing-function: linear, steps(2, end);
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes blink {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+/* Standard syntax */
+@keyframes blink {
+  0% {opacity: 1;}
+  50% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+
 .learning {
   text-align:center;
   background: #f2f2f2;
