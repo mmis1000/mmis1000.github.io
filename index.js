@@ -220,4 +220,4 @@ typer.actions.alert = function (args, next, typer) {
   alert(text);
   next();
 }
-typer.start();
+//typer.start();
