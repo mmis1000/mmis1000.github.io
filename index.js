@@ -210,7 +210,7 @@ typer.actions.setStyle = function (args, next, typer) {
   next();
 };
 typer.actions.animate = function (args, next, typer) {
-  
+  var called = false;
   var selector = args[1];
   
   var props = {};
@@ -221,13 +221,32 @@ typer.actions.animate = function (args, next, typer) {
   
   var duration = parseInt(args[4]) || 500;
   $(selector).animate(props, duration, 'swing', function () {
+    if (called) return;
+    called = true;
     next();
+    console.log(args);
   });
 }
 typer.actions.alert = function (args, next, typer) {
   var text = args.slice(1).join(' ');
   alert(text);
   next();
+}
+typer.actions.scrollTo = function (args, next, typer) {
+  var called = false;
+  var target = $(args[1]);
+  console.log(target);
+  var yPos = target.offset().top;
+  var time = parseInt(args[2]);
+  if (isNaN(time)) {
+    time = 1000;
+  }
+  $('html,body').animate({scrollTop: yPos}, time, 'swing', function () {
+    if (called) return;
+    called = true;
+    next();
+  });
+  
 }
 $(".control").removeClass("hide");
 $(".control").on("click", function () {
@@ -240,6 +259,10 @@ $(".control").on("click", function () {
     $(this).removeClass('stop').addClass('play');
   }
 });
+typer.handles.start = function () {
+  $(".control").removeClass('play').addClass('stop');
+}
 typer.handles.stop = function () {
   $(".control").removeClass('stop').addClass('play');
 }
+typer.start();
