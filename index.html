@@ -31,12 +31,11 @@
           root.setAttribute( "class", "ie-8" );
        </script>
     <![endif]-->
-    <!--[if gte IE 9]>
-       <script>
-          var root = document.documentElement;
-          root.setAttribute( "class", "ie-9" );
-       </script>
-    <![endif]-->
+    <script>
+        if (Function('/*@cc_on return document.documentMode>=9@*/')()){
+            document.documentElement.className+=' ie10';
+        }
+    </script>
   </head>
   <body>
     <!--[if lt IE 8]>
