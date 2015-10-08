@@ -1,4 +1,10 @@
+<!--[if lt IE 9]>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+  "http://www.w3.org/TR/html4/loose.dtd">
+<![endif]-->
+<!--[if gte IE 9]><!-->
 <!DOCTYPE html>
+<!--<![endif]-->
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -25,13 +31,38 @@
           root.setAttribute( "class", "ie-8" );
        </script>
     <![endif]-->
+    <!--[if gte IE 9]>
+       <script>
+          var root = document.documentElement;
+          root.setAttribute( "class", "ie-9" );
+       </script>
+    <![endif]-->
   </head>
   <body>
     <!--[if lt IE 8]>
       <div style='position:fixed;background:red;color:white;top:0px;left:0px;right:0px;font-size:1.5em;z-index:99999'>Your browser is out of date, and it wont display correctly with this site. Please consider update your browser!! <a href="https://whatbrowser.org/" style=" text-decoration: underline;">Learn more...</a></div>
     <![endif]-->
-
-    <section class="page about-wrapper">
+    <nav class="nav">
+      <label class="icon click" for="toggle-menu">
+        <i class="fa fa-bars"></i>
+      </label>
+      <input id="toggle-menu" type="checkbox">
+      <div class="overlay">
+        <ul class="links">
+          <li class="close">
+            <label class="click" for="toggle-menu">
+              <i class="fa fa-times fa-2x"></i>
+            </label>
+          </li>
+          <li><a href="#about-wrapper">About me</a></li>
+          <li><a href="#from">From</a></li>
+          <li><a href="#learning">Learning</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="last"><a href="#copyright">Copyright</a></li>
+        </ul>
+      </div>
+    </nav>
+    <header id="about-wrapper" class="page about-wrapper">
       <div class="about-outer">
         <div class="about-inner">
           <i class="fa fa-user fa-5x avatar"></i>
@@ -125,8 +156,8 @@
           <button class="control play hide"></button>
         </div>
       </div>
-    </section>
-    <section class="page from">
+    </header>
+    <section id="from" class="page from">
       <h2>I am coming from.</h2>
       <div class="pane description">
         <div class="text">
@@ -140,7 +171,7 @@
       </div>
     </section>
     
-    <section class="page learning">
+    <section id="learning" class="page learning">
       <h2>What am I learning?</h2>
       <section class="skill">
         <div class="skill-inner">
@@ -186,7 +217,7 @@
         </div>
       </section>
     </section>
-    <section class="contact page">
+    <section id="contact" class="contact page">
       <h2>To Contact <i class="fa fa-reply"></i></h2>
       <section class="contact-method github">
         <i class="fa fa-github fa-5x"></i>
@@ -205,7 +236,7 @@
         <p><a href="mailto:mmis1000@yahoo.com.tw">Mmis1000</a></p>
       </section>
     </section>
-    <footer class="page footer">
+    <footer id="copyright" class="page footer copyright">
       <h3>About this Page</h3>
       <p>
         Last edit: <time datetime="2015-10-03 09:30">2015/10/03</time><br>

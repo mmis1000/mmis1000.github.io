@@ -99,6 +99,7 @@ em {
   border: 1px solid #bbbbbb;
   padding: 0.5em;
   border-radius: 6px;
+  behavior: url(border-radius.htc); /* IE 6-8 */
 }
 .control.hide {
   display: none;
@@ -128,6 +129,9 @@ em {
   text-align: center;
   background: #ffffff;
   color: #111111;
+  
+  padding-top:2em;
+  padding-bottom:2e;
 }
 .from .map {
   margin: 0px;
@@ -140,7 +144,7 @@ em {
 }
 
 .from .description {
-  background-image: url(http://i.imgur.com/cQ2WSz9.jpg);
+  background-image: url(ncku-logo.jpg);
   background-size: auto, 100%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -155,12 +159,15 @@ em {
   background: -o-linear-gradient(left, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.7) 100%);
   background: -ms-linear-gradient(left, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.7) 100%);
   background: linear-gradient(to right, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.7) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#b3ffffff', endColorstr='#b3ffffff');
 }
 
 .learning {
   text-align:center;
   background: #f2f2f2;
+  
+  padding-top:2em;
+  padding-bottom:2e;
 }
 .learning .skill {
   width: 100%;
@@ -221,6 +228,9 @@ em {
   color: #f7f7f7;
   background: #222222;
   text-align: center;
+  
+  padding-top:2em;
+  padding-bottom:2e;
 }
 
 .contact .contact-method {
@@ -234,10 +244,113 @@ em {
 }
 .footer {
   text-align: center;
-  background: #777777;
+  background:#333333;
+  color: #dddddd;
 }
 .footer a {
-  color: #000000;
+  color: #dddddd;
+}
+
+
+
+.nav {
+  z-index:99998;
+  position: fixed;
+  top: 0px;
+  left:0px;
+  right:0px;
+  
+  text-align: right;
+  line-height: 2em;
+  height: 2em;
+  padding: 0.2em;
+}
+.nav .icon {
+  display: inline-block;
+  height:2em;
+  width:2em;
+  line-height:1.8em;
+  text-align: center;
+  box-sizing: border-box;
+  border: 0.1em solid #ffffff;
+  border-radius: 4px;
+  /*vertical-align: middle;*/
+  behavior: url(border-radius.htc); /* IE 6-8 */
+  color:white;
+}
+.nav .overlay {
+  z-index:99999;
+  position: fixed;
+  top: 0px;
+  bottom:0px;
+  right:0px;
+  left:0px;
+  background: rgba(64, 64, 64, 0.7);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#b3404040', endColorstr='#b3404040');
+  display: none;
+  
+}
+#toggle-menu:checked ~ .overlay {
+  display: block;
+}
+
+.nav .links {
+  position:absolute;
+  right:0px;
+  top:0px;
+  bottom:0px;
+  width:240px;
+  
+  list-style: none;
+  text-align: right;
+  
+  padding: 1em;
+  
+  margin:0px;
+  
+  background:#7799aa;
+  color:white;
+}
+.nav a:before {
+  display: none;
+}
+
+.nav .links li {
+  text-align:left;
+  margin: 0em 0.5em 0em 0.5em;
+  padding: 0.5em 0em 0.5em 0em;
+  border-bottom: 1px solid #dddddd;
+  position: relative;
+}
+.nav .links li.close {
+  text-align:right;
+  border-bottom: none;
+}
+.nav .links li.last {
+  border-bottom: none;
+}
+.nav .links li:after {
+  position: absolute;
+  left: -8px;
+  top: 6px;
+  bottom: 6px;
+  width: 4px;
+  display:block;
+  background: #ffffff;
+  content: " ";
+  opacity: 0;
+  
+  -webkit-transition: opacity 0.5s; /* Safari */
+  transition: opacity 0.5s;
+}
+.nav .links li.selected:after {
+  opacity: 1;
+}
+label.click {
+  cursor: pointer;
+}
+#toggle-menu {
+  display: none;
 }
 
 
@@ -245,11 +358,9 @@ em {
 .ie-8 .learning .skill, .ie-8 .contact .contact-method {
   width: 33%;
 }
-
 .ie-8 .contact .contact-method {
   border-top: none;
 }
-
 .ie-8 .from {
   padding-bottom: 2em;
 }
@@ -258,7 +369,6 @@ em {
   display: inline-block;
   vertical-align: top;
 }
-
 .ie-8 .from .map {
   overflow:hidden;
 
@@ -270,6 +380,15 @@ em {
   height: 400px;
   box-sizing: border-box;
   padding: 1em;
+}
+.ie-8 #toggle-menu.checked ~ .overlay {
+  display: block;
+}
+.nav .links li:after {
+  display: none\9;
+}
+.ie-9 .nav .links li:after {
+  display: block;
 }
 
 @media screen and (min-width: 600px) {
