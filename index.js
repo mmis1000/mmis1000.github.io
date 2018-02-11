@@ -403,10 +403,10 @@ $('label').on('click', function () {
   var navHeight = $('nav').height();
   var header = $('header');
   var headerBottom = $('header').offset().top + $('header').outerHeight() - navHeight;
-  var color = [92, 92, 92];
+  var color = [41, 182, 246];
   var initAlpha = 0;
-  var finalAlpha = 0.7;
-  var ie8 = '#606060';
+  var finalAlpha = 1;
+  var ie8 = '#29B6F6';
   var handle = throttle(function (ev) {
     var alpha;
     var currentScroll = $(window).scrollTop();
