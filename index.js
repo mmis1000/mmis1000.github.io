@@ -409,23 +409,30 @@ $('label').on('click', function () {
   var ie8 = '#29B6F6';
   var handle = throttle(function (ev) {
     var alpha;
+    var shadow;
     var currentScroll = $(window).scrollTop();
     //console.log(navHeight, headerBottom, currentScroll);
     if (currentScroll < headerBottom - navHeight) {
       alpha = initAlpha;
+      shadow = '';
     } else if (headerBottom < currentScroll) {
       alpha = finalAlpha;
+      shadow = '0 3px 6px rgba(0,0,0,0.32)';
     } else {
       alpha = ((headerBottom - currentScroll) * initAlpha +
                (currentScroll - headerBottom + navHeight) * finalAlpha)
         / navHeight;
+      shadow = '';
     }
     //alert('rgba(' + color.concat([alpha]).join('') + ')');
     var bg = 'rgba(' + color.concat([alpha]).join(',') + ')';
     if ($('html').hasClass('ie-8') && headerBottom < currentScroll) {
       bg = ie8;
     }
-    $('nav').css('background', bg);
+    $('nav').css({
+      'background': bg,
+      'boxShadow': shadow
+    });
     //console.log(alpha, bg);
   }, 100);
   $(document).on('scroll', handle);
@@ -482,7 +489,6 @@ $('label').on('click', function () {
 ;(function () {
   var spyLinks = [
     "#about-wrapper",
-    "#from",
     "#learning",
     "#contact",
     "#copyright"
