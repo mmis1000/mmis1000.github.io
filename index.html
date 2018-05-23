@@ -65,10 +65,14 @@
         <div class="about-inner">
           <i class="fa fa-user fa-5x avatar"></i>
           <h1>Mmis1000</h1>
-          <p class="cursor">
+          <p class="links">
+            <a href="https://mmis1000.me/blog"><button class="button">Blog</button></a>
+            <a href="https://t.me/mmis1000"><button class="button">Telegram</button></a>
+          </p>
+          <p class="cursor target">
             <!-- $scrollTo .about-wrapper 500 -->
             Hello 
-            <!-- $removeText 7 -->visitor<!-- $who who are you? -->! 
+            visitor! 
             I am mmis1000<!-- $setTypeInterval 500 -->.<!-- $type .. --><!-- $setTypeInterval 50 --> 
             who learning the web technology and skills.
             
@@ -130,17 +134,19 @@
             <!-- $animate .avatar left 50px 500 -->
             <!-- $animate .avatar left 0px 250 -->
             <!-- $type <br>Interact with user. -->
-            <!-- $alert Hey! I am a dialog! -->
+            <!-- $delay 1000 -->
+            <!-- $setStyleToSelector #popup display block -->
+            <!-- $delay 1000 -->
+            <!-- $setStyleToSelector #popup display none -->
             <!-- $type <br>Make all kinds of magic happeneds. -->
             <!-- $delay 1000 -->
             <!-- $clear -->
             
-            <!-- $type That all I am learning now. -->
+            <!-- $type These are all I am learning now. -->
             <!-- $type <br>Thank you for your listening. -->
             <!-- $type <br>Goodbye!!! -->
             <!-- $delay 3000 -->
             <!-- $reset -->
-
           </p>
           <button class="control play hide"></button>
         </div>
@@ -234,7 +240,7 @@
         Code release under <a href="https://en.wikipedia.org/wiki/MIT_License">MIT License</a>
       </p>
     </footer>
-    
+    <div id="popup" class="popup">Hey, I am a popup!</div>
     <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
     <script src="index.js"></script>
   </body>

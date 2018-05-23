@@ -60,7 +60,9 @@ em {
      -moz-text-shadow:0px 2px 10px #000000;
           text-shadow:0px 2px 10px #000000;
 }
-
+.about-inner .links a::before {
+  display: none;
+}
 .cursor:after{
   content: "|";
   
@@ -100,6 +102,10 @@ em {
   padding: 0.5em;
   border-radius: 6px;
   behavior: url(border-radius.htc); /* IE 6-8 */
+
+  -webkit-text-shadow:0px 2px 10px #000000;
+     -moz-text-shadow:0px 2px 10px #000000;
+          text-shadow:0px 2px 10px #000000;
 }
 .control.hide {
   display: none;
@@ -123,6 +129,18 @@ em {
 }
 .control.stop:after {
   content: "stop";
+}
+
+.button {
+  background: transparent;
+  border: 1px solid #bbbbbb;
+  padding: 0.2em 0.5em;
+  border-radius: 6px;
+  behavior: url(border-radius.htc); /* IE 6-8 */
+
+  -webkit-text-shadow:0px 2px 10px #000000;
+     -moz-text-shadow:0px 2px 10px #000000;
+          text-shadow:0px 2px 10px #000000;
 }
 
 .from {
@@ -354,6 +372,21 @@ label.click {
   display: none;
 }
 
+.popup {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -100px;
+  margin-top: -50px;
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background: #fefefe;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.32) 0px 3px 6px;
+}
 
 /* ie must die */
 .ie-8 .learning .skill, .ie-8 .contact .contact-method {
