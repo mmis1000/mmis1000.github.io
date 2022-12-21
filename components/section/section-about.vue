@@ -266,8 +266,6 @@ onMounted(() => {
   border: 1px solid #bbbbbb;
   padding: 0.5em;
   border-radius: 6px;
-  behavior: url(border-radius.htc); /* IE 6-8 */
-
   -webkit-text-shadow:0px 2px 10px #000000;
      -moz-text-shadow:0px 2px 10px #000000;
           text-shadow:0px 2px 10px #000000;
