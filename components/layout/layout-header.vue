@@ -102,11 +102,22 @@ onMounted(() => {
   left:0px;
   background: rgba(64, 64, 64, 0.7);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#b3404040', endColorstr='#b3404040');
-  display: none;
-  
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 #toggle-menu:checked ~ .overlay {
-  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+.overlay .links {
+  transform: translateX(200px);
+  transition: all .3s;
+}
+#toggle-menu:checked ~ .overlay .links{
+  transform: translateX(0px);
 }
 
 .nav .links {

@@ -12,11 +12,12 @@
           Hello
           visitor!
           I am mmis1000.
-          who learning the web technology and skills.
+          <br>
+          Who learning the web technology and skills.
         </p>
         <p v-else class="cursor target" :style="currentStyle" v-html="ghostWritingHTML">
         </p>
-        <button class="control play" :class="{
+        <button class="control" :class="{
           hide: !mounted,
           play: !ghostWoken,
           stop: ghostWoken
@@ -47,7 +48,7 @@ const actions = ScriptBuilder.create()
   .changeInterval(500)
   .text('...')
   .changeInterval(50)
-  .text('who learning the web technology and skills.')
+  .text('<br>Who learning the web technology and skills.')
   .delay(2000)
   .clear()
 
@@ -281,19 +282,20 @@ onMounted(() => {
   padding-right: 3px;
 }
 
-@keyframes blink {
+@keyframes blink-button {
   0% {
     opacity: 1;
   }
   50% {
-    opacity: 0.8;
+    opacity: 0.75;
   }
   100% {
     opacity: 1;
   }
 }
 .control.play {
-  animation: infinite 2s blink;
+  filter: drop-shadow(0 0 1px rgba(255,255,255,0.5));
+  animation: infinite 2s blink-button;
 }
 .control.play:before {
   content: "\f04b";
