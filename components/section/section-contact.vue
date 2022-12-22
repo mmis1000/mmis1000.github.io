@@ -92,7 +92,7 @@
 .method-data {
   margin-left: 1em;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
   .contact {
     padding: 2em;
   }
@@ -100,6 +100,7 @@
   .method-wrapper {
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
   .contact .contact-method::after {
@@ -110,6 +111,13 @@
     padding: 0;
     flex-direction: column;
     flex-grow: 1;
+  }
+}
+@media screen and (min-width: 1000px) {
+  
+  .contact .contact-method {
+    flex-grow: 0;
+    width: 330px;
   }
 }
 </style>
