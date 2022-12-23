@@ -5,20 +5,12 @@
       <div class="item">
         <iframe scrolling="no" title="ECS rain drop"
           src="https://codepen.io/mmis1000/embed/KKpwGjM?default-tab=result&editable=true" frameborder="no"
-          loading="lazy" allowtransparency="true" allowfullscreen="true">
-          See the Pen <a href="https://codepen.io/mmis1000/pen/KKpwGjM">
-            ECS rain drop</a> by mmis1000 (<a href="https://codepen.io/mmis1000">@mmis1000</a>)
-          on <a href="https://codepen.io">CodePen</a>.
-        </iframe>
+          loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
       </div>
       <div class="item">
         <iframe scrolling="no" title="Text drawing Dynamic step"
           src="https://codepen.io/mmis1000/embed/MZvpGd?default-tab=result&editable=true" frameborder="no"
-          loading="lazy" allowtransparency="true" allowfullscreen="true">
-          See the Pen <a href="https://codepen.io/mmis1000/pen/MZvpGd">
-            Text drawing Dynamic step</a> by mmis1000 (<a href="https://codepen.io/mmis1000">@mmis1000</a>)
-          on <a href="https://codepen.io">CodePen</a>.
-        </iframe>
+          loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
       </div>
       <div class="item">
         <iframe scrolling="no" title="The shooter"
