@@ -1,5 +1,5 @@
 <template>
-  <section id="learning" class="page learning">
+  <section class="page learning">
     <h2 class="title">What am I learning?</h2>
     <div class="skill-wrapper">
       <section class="skill">

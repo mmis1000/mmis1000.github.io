@@ -17,6 +17,7 @@
         </li>
         <li><a href="#about-wrapper">About me</a></li>
         <li><a href="#learning">Learning</a></li>
+        <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact">Contact</a></li>
         <li class="last"><a href="#copyright">Copyright</a></li>
       </ul>

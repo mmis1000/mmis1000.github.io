@@ -2,9 +2,10 @@
   <div class="app__container">
     <LayoutHeader trace-on-selector="#about-wrapper"></LayoutHeader>
     <SectionAbout id="about-wrapper"></SectionAbout>
-    <SectionLearning></SectionLearning>
+    <SectionLearning id="learning"></SectionLearning>
+    <SectionGallery id="gallery"></SectionGallery>
     <SectionContact id="contact"></SectionContact>
-    <LayoutFooter></LayoutFooter>
+    <LayoutFooter id="copyright"></LayoutFooter>
   </div>
 </template>
 <style src="normalize.css/normalize.css"></style>
