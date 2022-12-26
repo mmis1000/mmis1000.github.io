@@ -2,21 +2,35 @@
   <section class="gallery page">
     <h2 class="title">Gallery</h2>
     <div class="grid">
-      <div class="item">
+      <GalleryItem
+        class="item"
+        title="A rain effect animation"
+        external-link="https://codepen.io/mmis1000/pen/MZvpGd"
+      >
         <iframe scrolling="no" title="ECS rain drop"
           src="https://codepen.io/mmis1000/embed/KKpwGjM?default-tab=result&editable=true" frameborder="no"
           loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-      </div>
-      <div class="item">
+      </GalleryItem>
+      <GalleryItem
+        class="item"
+        title="A text animation rendered by vue"
+        external-link="https://codepen.io/mmis1000/pen/MZvpGd"
+      >
         <iframe scrolling="no" title="Text drawing Dynamic step"
           src="https://codepen.io/mmis1000/embed/MZvpGd?default-tab=result&editable=true" frameborder="no"
           loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-      </div>
-      <div class="item">
+      </GalleryItem>
+      <GalleryItem
+        class="item"
+        title="A Shooter game without framework"
+        source-link="https://github.com/mmis1000/the-shooter"
+        external-link="https://mmis1000.me/the-shooter/"
+        prevent-interaction
+      >
         <iframe scrolling="no" title="The shooter"
           src="https://mmis1000.me/the-shooter/" frameborder="no"
           loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
-      </div>
+      </GalleryItem>
     </div>
   </section>
 </template>
@@ -50,10 +64,6 @@
 .item {
   width: 100%;
   height: 80vh;
-  display: flex;
-  align-items: stretch;
-  justify-content: stretch;
-  overflow: hidden;
 }
 
 .item iframe {
