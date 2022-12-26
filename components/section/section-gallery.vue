@@ -13,7 +13,7 @@
       </GalleryItem>
       <GalleryItem
         class="item"
-        title="A text animation rendered by vue"
+        title="A text animation rendered with vue"
         external-link="https://codepen.io/mmis1000/pen/MZvpGd"
       >
         <iframe scrolling="no" title="Text drawing Dynamic step"
