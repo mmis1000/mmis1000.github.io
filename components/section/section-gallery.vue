@@ -22,7 +22,7 @@
       </GalleryItem>
       <GalleryItem
         class="item"
-        title="A Shooter game without framework"
+        title="A shooter game without framework"
         source-link="https://github.com/mmis1000/the-shooter"
         external-link="https://mmis1000.me/the-shooter/"
         prevent-interaction
