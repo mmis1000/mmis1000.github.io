@@ -200,8 +200,8 @@ onMounted(() => {
   height:100%;
   display:table;
   
-  background:black;
-  background:url(~/assets/bg.jpg);
+  background-color: #4b1c0b;
+  background-image: url(~/assets/bg.jpg);
   background-size: auto, 100%;
   background-size: cover;
   background-repeat: no-repeat;
