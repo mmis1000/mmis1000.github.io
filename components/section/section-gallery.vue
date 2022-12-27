@@ -31,6 +31,13 @@
           src="https://mmis1000.me/the-shooter/" frameborder="no"
           loading="lazy" allowtransparency="true" allowfullscreen="true"></iframe>
       </GalleryItem>
+      <GalleryItem
+        class="item"
+        title="A clock wrote using vue"
+        source-link="https://github.com/mmis1000/mmis1000.github.io/blob/master/components/gallery-sample/clock/clock-container.vue"
+      >
+        <GallerySampleClockContainer />
+      </GalleryItem>
     </div>
   </section>
 </template>
