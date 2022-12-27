@@ -54,14 +54,19 @@ export default defineComponent({
   background-color: rgb(237, 237, 237);
 }
 .clock-item {
-  margin-top: 00.1em;
+  margin-top: 0.1em;
 }
 
-@media screen and (max-width: 500px) {
+::v-deep(.wrapper) {
+  font-size: 40px;
+}
+
+@media screen and (max-width: 800px) {
   ::v-deep(.wrapper) {
-    font-size: 40px;
+    font-size: 10vw
   }
 }
+
 
 ::v-deep(*) {
   font-family: 'Major Mono Display', monospace;
