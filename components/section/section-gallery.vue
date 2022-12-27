@@ -4,7 +4,7 @@
     <div class="grid">
       <GalleryItem
         class="item"
-        title="A rain effect animation"
+        title="A rain effect animation on canvas 2d"
         external-link="https://codepen.io/mmis1000/pen/MZvpGd"
       >
         <iframe scrolling="no" title="ECS rain drop"
