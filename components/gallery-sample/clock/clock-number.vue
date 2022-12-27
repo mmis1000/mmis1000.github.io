@@ -45,15 +45,13 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .digit {
-  font-size: 60px;
-
   height: 1em;
   width: 1em;
   overflow: hidden;
   display: inline-block;
 
   .current, .next {
-    height: 1.2m;
+    height: 1.2em;
     width: 1.2em;
     line-height: 1.2em;
     text-align: center;

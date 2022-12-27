@@ -102,7 +102,6 @@ export default defineComponent({
 }
 
 .wrapper {
-  font-size: 60px;
   border-bottom: 1px solid #bbb;
   line-height: 1em;
   padding-bottom: 0.1em;
