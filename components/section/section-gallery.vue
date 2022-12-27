@@ -92,4 +92,11 @@
     border-radius: 4px;
   }
 }
+@media screen and (min-width: 1000px) {
+  
+  .grid {
+    width: 936px;
+    margin: 0 auto;
+  }
+}
 </style>

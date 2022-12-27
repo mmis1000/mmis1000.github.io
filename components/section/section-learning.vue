@@ -70,6 +70,7 @@
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
+  margin: 0 -6px;
 }
 .learning .skill {
   width: 100%;
@@ -140,7 +141,7 @@
 @media screen and (min-width: 1000px) {
   .learning .skill, .contact .contact-method {
     flex-grow: 0;
-    width: 330px;
+    width: 316px;
   }
 }
 </style>
