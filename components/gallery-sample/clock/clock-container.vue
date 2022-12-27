@@ -31,6 +31,7 @@ export default defineComponent({
   },
   computed: {
     fast (): number {
+      /** inject dither to the timestamp so it won't show weird pattern when fast forward  */
       return this.initial + (this.current - this.initial + Math.random() * 16) * 10
     },
     slow (): number {
