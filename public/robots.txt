@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# Respect the GitHub Pages sitemap-less static site setup by allowing all crawlers.
